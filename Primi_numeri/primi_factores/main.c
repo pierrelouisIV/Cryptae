@@ -6,6 +6,10 @@
 #define TRUE  1
 #define FALSE 0
 
+
+/* compilation : gcc -o prog main.c -lm  */
+
+
 //
 typedef unsigned long long u64;
 
@@ -56,8 +60,17 @@ int prime_factors(u64 n)
 //
 int main(int argc, char **argv)
 {
+    //
+    if (argc == 2)
+    {
+        u64 n = atoi(argv[1]);
+        prime_factors(n);
+    }
+    else
+    {
+        printf("Usage: %s [integer to decompose] \n", argv[0]);
+    }
 
     //
-    prime_factors(555525);
     return 0;
 }
