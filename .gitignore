@@ -33,6 +33,10 @@
 *.out
 *.app
 *.i*86
+
+
+# vscode :
+.vscode
 *.x86_64
 *.hex
 
