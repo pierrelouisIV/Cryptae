@@ -54,8 +54,11 @@ u64 *crible_eratosthene(u64 n)
     // allocate mem
     u64 * L = malloc(sizeof(u64) * n);
 
+    // the first prime number
+    L[0] = 2;
+
     // fill the list
-    for(u64 i = 2; i < n; ++i)
+    for(u64 i = 3; i < n; i+=2)
     {
         if (second_isprime(i))
         {
@@ -78,7 +81,7 @@ int main(int argc, char **argv)
     if (argc == 2)
     {
         //
-        u64 integer = atoi(argv[1]);
+        u64 integer = atoll(argv[1]);
         if (second_isprime(integer))
             printf("%llu is prime \n", integer);
         else

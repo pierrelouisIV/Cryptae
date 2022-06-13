@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     //
     if (argc == 2)
     {
-        u64 n = atoi(argv[1]);
+        u64 n = atoll(argv[1]);
         prime_factors(n);
     }
     else
